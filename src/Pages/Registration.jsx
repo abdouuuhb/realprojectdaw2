@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import RegistrationSteps from "../components/RegistrationSteps"; // استورد المكون هنا
-
+import { useRegistration } from "../Context/RegistrationContext";
 function Registration() {
+  const { addRegistration } = useRegistration();
+  const navigate = useNavigate();
   // حالة وهمية عشان الشريط يظهر (ممكن تغيّرها لاحقًا لو عايز multi-step)
   const currentStep = 1; // أو 2 أو 3 عشان تشوف التغيير
 
@@ -119,9 +122,25 @@ function Registration() {
             </section>
 
             {/* Submit */}
-            <button className="w-full py-4 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-indigo-800 text-white font-bold text-xl rounded-xl shadow-lg transform hover:scale-105 transition">
-              Confirm Registration
-            </button>
+            <button
+  onClick={() => {
+    alert("🎉 تم التسجيل بنجاح!");
+    navigate("/my-registrations");
+  }}
+  className="w-full py-4 bg-sky-500 hover:bg-sky-600 text-white font-bold text-xl rounded-xl shadow-lg transition"
+>
+  Confirm Registration
+</button>
+
+{/* أضف ده تحت الزر مباشرة */}
+<div className="text-center mt-10">
+  <Link
+    to="/my-registrations"
+    className="inline-block px-10 py-5 bg-gradient-to-r from-cyan-600 to-blue-700 text-white font-bold text-2xl rounded-2xl hover:shadow-2xl transition transform hover:scale-105"
+  >
+    View My Registrations →
+  </Link>
+</div>
           </div>
         </div>
       </div>

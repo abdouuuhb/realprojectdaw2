@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import RegistrationSteps from "../components/person5/registration/RegistrationSteps"; // المسار الصحيح عندك
-import { useRegistration } from "../context/RegistrationContext"; // للربط مع MyRegistrations لاحقًا
+import { useRegistration } from "../Context/RegistrationContext"; // للربط مع MyRegistrations لاحقًا
 
 function Registration() {
   // حالة الخطوة الحالية في شريط التقدم
