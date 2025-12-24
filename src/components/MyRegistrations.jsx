@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
-import { useRegistration } from "../Context/RegistrationContext"; // للربط مع MyRegistrations لاحقًا
+import { useRegistration } from "../Context/RegistrationContext"; 
+import RegistrationStatus from "./RegistrationStatus";
+import PaymentStatus from "./PaymentStatus";
 
 function Registration() {
   // حالة الخطوة الحالية في شريط التقدم
@@ -141,6 +143,12 @@ function Registration() {
             >
               Confirm Registration
             </button>
+
+{/* Submit */}
+<button className="w-full py-4 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-indigo-800 text-white font-bold text-xl rounded-xl shadow-lg transform hover:scale-105 transition">
+  Confirm Registration
+</button>
+
           </div>
         </div>
       </div>

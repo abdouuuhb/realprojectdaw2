@@ -132,15 +132,36 @@ function Registration() {
   Confirm Registration
 </button>
 
-{/* أضف ده تحت الزر مباشرة */}
-<div className="text-center mt-10">
-  <Link
-    to="/my-registrations"
-    className="inline-block px-10 py-5 bg-gradient-to-r from-cyan-600 to-blue-700 text-white font-bold text-2xl rounded-2xl hover:shadow-2xl transition transform hover:scale-105"
-  >
-    View My Registrations →
-  </Link>
-</div>
+{/* الزر ده مضمون يبان 100% - لون أخضر قوي + inline style */}
+            <div className="text-center mt-12">
+              <Link
+                to="/my-registrations"
+                className="inline-block px-12 py-6 text-white font-bold text-2xl rounded-2xl shadow-2xl transition-all duration-300 transform hover:scale-110"
+                style={{
+                  background: 'linear-gradient(to right, #16a34a, #15803d)', // أخضر قوي متدرج
+                  boxShadow: '0 10px 25px rgba(22, 163, 74, 0.4)'
+                }}
+              >
+                View My Registrations →
+              </Link>
+            </div>
+
+            {/* زر الانتقال للجلسة التفاعلية - sky blue قوي مضمون يبان */}
+            <div className="text-center mt-8">
+              <Link
+                to="/interactive"
+                className="inline-block px-12 py-6 text-white font-bold text-2xl rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-110"
+                style={{
+                  backgroundColor: '#0ea5e9', // sky-500 بالضبط
+                  boxShadow: '0 10px 30px rgba(14, 165, 233, 0.4)'
+                }}
+                onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#0284c7'} // hover أغمق (sky-600)
+                onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#0ea5e9'} // رجوع للون الأصلي
+              >
+                🔴 Join Live Interactive Session →
+              </Link>
+            </div>
+
           </div>
         </div>
       </div>
@@ -149,7 +170,6 @@ function Registration() {
 }
 
 export default Registration;
-
 
 
 
