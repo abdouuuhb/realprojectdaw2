@@ -194,19 +194,30 @@ function Interactive() {
         </div>
       </div>
 
-      {/* ================= FOOTER مختلف وأخف (sky blue) ================= */}
-      <footer className="bg-gradient-to-t from-cyan-900 via-sky-800 to-cyan-700 text-white py-12 relative">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+           {/* ================= FOOTER مع زر الشهادات ================= */}
+      <footer className="bg-gradient-to-t from-cyan-900 via-sky-800 to-cyan-700 text-white py-16 relative">
+        <div className="max-w-7xl mx-auto px-6 text-center space-y-8">
           <p className="text-3xl font-black mb-4">
             Live Interactive Platform
           </p>
           <p className="text-xl opacity-90 mb-6">
             Innovation & Digital Health Workshop 2025
           </p>
-          <p className="text-lg opacity-80">
+          <p className="text-lg opacity-80 mb-10">
             University of Constantine 2 – Abdelhamid Mehri
           </p>
-          <p className="mt-8 text-sm opacity-70">
+
+          {/* الزر الكبير والفخم في الفوتر */}
+          <div className="my-12">
+            <Link
+              to="/certificates"
+              className="inline-block px-16 py-8 bg-gradient-to-r from-emerald-600 to-teal-700 text-white font-black text-3xl rounded-3xl shadow-2xl hover:shadow-3xl hover:from-emerald-700 hover:to-teal-800 transition-all duration-500 transform hover:scale-110"
+            >
+              🏆 View My Certificates
+            </Link>
+          </div>
+
+          <p className="text-sm opacity-70">
             © 2025 All rights reserved
           </p>
         </div>
